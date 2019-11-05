@@ -8,7 +8,7 @@ import styles from './styles.module.css'
 
 function FavouriteThingPicker(props) {
   const getSuggestions = (inputValue) => props.items.filter(
-    thing => thing.includes(inputValue.toLowerCase())
+    thing => thing.toLowerCase().includes(inputValue.toLowerCase())
   );
   return (
     <Fade in={props.isOwnersFilterShown} mountOnEnter unmountOnExit>
